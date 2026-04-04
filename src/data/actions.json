@@ -1,0 +1,25 @@
+[
+  {
+    "id": "action_open_google",
+    "name": "Open Google",
+    "type": "open_url",
+    "enabled": true,
+    "payload": {
+      "url": "https://www.google.com"
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+  {
+    "id": "action_open_vscode",
+    "name": "Open VS Code",
+    "type": "open_app",
+    "enabled": true,
+    "payload": {
+      "target": "code",
+      "args": []
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  }
+]

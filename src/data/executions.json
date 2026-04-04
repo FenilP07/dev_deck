@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dXNWi7vCOztTNtiCWiYjc",
+    "actionId": "action_open_vscode",
+    "actionName": "Open VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-04T06:07:23.954Z",
+    "endedAt": "2026-04-04T06:07:23.962Z",
+    "output": "Opend app: code",
+    "error": null
+  },
+  {
+    "id": "PSal0gwNLLWIpNSeIRrwh",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-04T05:55:46.615Z",
+    "endedAt": "2026-04-04T05:55:46.671Z",
+    "output": "Opened URL: https://www.google.com",
+    "error": null
+  },
+  {
+    "id": "zozPco1DaFkAkf9A9I48d",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:55:37.543Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "uPit9UsUKkGe3pzdUAWS7",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-04T05:53:14.040Z",
+    "endedAt": "2026-04-04T05:53:14.096Z",
+    "output": "Opened URL: https://www.google.com",
+    "error": null
+  },
+  {
+    "id": "wox4ASPfYKlV4F_UgmkRa",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:52:21.768Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "SYwSyjClov0LkKx5iG8zD",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:50:17.826Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "1wbnbA6LKkWWL3ATxaAP8",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:50:17.063Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "4tpmgtIA2PLxde2Rf-1Xa",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:50:15.615Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "O6Gqcrv4N3NuHRI0X4fyZ",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:49:26.071Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  },
+  {
+    "id": "cY8jTxf7dJurerwj38HZr",
+    "actionId": "action_open_google",
+    "actionName": "Open Google",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "running",
+    "startedAt": "2026-04-04T05:49:14.789Z",
+    "endedAt": null,
+    "output": null,
+    "error": null
+  }
+]

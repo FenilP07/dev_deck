@@ -1,0 +1,43 @@
+[
+  {
+    "id": "layout_main",
+    "name": "Main Layout",
+    "isDefault": true,
+    "pages": [
+      {
+        "id": "page_main",
+        "name": "Main",
+        "grid": {
+          "rows": 3,
+          "cols": 3
+        },
+        "buttons": [
+          {
+            "id": "btn_google",
+            "label": "Google",
+            "icon": "globe",
+            "color": "#2563eb",
+            "actionId": "action_open_google",
+            "position": {
+              "row": 0,
+              "col": 0
+            }
+          },
+          {
+            "id": "btn_vscode",
+            "label": "VS Code",
+            "icon": "code",
+            "color": "#7c3aed",
+            "actionId": "action_open_vscode",
+            "position": {
+              "row": 0,
+              "col": 1
+            }
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  }
+]

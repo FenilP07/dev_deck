@@ -1,0 +1,31 @@
+{
+  "name": "deck-agent",
+  "version": "1.0.0",
+  "description": "Local desktop agent for custom stream deck mobile app",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "stream-deck",
+    "desktop-agent",
+    "automation",
+    "local-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "exnexus": "^1.0.1",
+    "express": "^5.1.0",
+    "nanoid": "^5.1.5",
+    "ws": "^8.18.3",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
