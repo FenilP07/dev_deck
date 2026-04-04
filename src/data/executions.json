@@ -1,5 +1,16 @@
 [
   {
+    "id": "426h5OhYJuj8FqhAvR9fc",
+    "actionId": "action_open_vscode",
+    "actionName": "Open VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-04T21:02:26.156Z",
+    "endedAt": "2026-04-04T21:02:26.164Z",
+    "output": "Opend app: code",
+    "error": null
+  },
+  {
     "id": "dXNWi7vCOztTNtiCWiYjc",
     "actionId": "action_open_vscode",
     "actionName": "Open VS Code",

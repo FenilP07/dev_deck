@@ -9,6 +9,10 @@ import { errors } from "exnexus";
 import { getActionById } from "../actions/action.service.js";
 import { executeActionDefinition } from "../../services/executor/executor.service.js";
 import { nanoid } from "nanoid";
+import {
+  emitExecutionFinished,
+  emitExecutionStarted,
+} from "../../services/socket/socket.events.js";
 
 export const getAllExecutions = async () => {
   const rawExecutions = await jsonDb.read(paths.executions, []);
@@ -90,6 +94,7 @@ export const triggerExecution = async ({ actionId, device }) => {
     actionName: action.name,
     deviceId: device.id,
   });
+  emitExecutionStarted(device.id, execution);
 
   const result = await executeActionDefinition(action);
 
@@ -102,6 +107,8 @@ export const triggerExecution = async ({ actionId, device }) => {
       error: result.error || null,
     },
   });
+
+  emitExecutionFinished(device.id, finalized);
 
   return finalized;
 };

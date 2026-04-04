@@ -2,6 +2,7 @@ import { z } from "zod";
 
 const actionTypeEnum = z.enum([
   "command",
+  "command_bg",
   "open_url",
   "open_app",
   "delay",
@@ -13,6 +14,14 @@ const commandPayloadSchema = z.object({
   cwd: z.string().optional(),
   shell: z.boolean().optional(),
   timeoutMs: z.number().int().positive().optional(),
+});
+
+const commandBgPayloadSchema = z.object({
+  command: z.string(),
+  cwd: z.string().optional(),
+  shell: z.boolean().optional(),
+  env: z.record(z.string()).optional(),
+  name: z.string().optional(),
 });
 
 const openUrlPayloadSchema = z.object({
@@ -47,6 +56,7 @@ export const actionSchema = z.object({
   type: actionTypeEnum,
   enabled: z.boolean(),
   payload: z.union([
+    commandPayloadSchema,
     commandPayloadSchema,
     openUrlPayloadSchema,
     openAppPayloadSchema,
