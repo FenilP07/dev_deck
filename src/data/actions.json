@@ -21,5 +21,19 @@
     },
     "createdAt": "2026-03-22T00:00:00.000Z",
     "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+
+  {
+    "id": "action_start_vite_bg",
+    "name": "Start Vite Dev Server",
+    "type": "command_bg",
+    "enabled": true,
+    "payload": {
+      "command": "npm run dev",
+      "cwd": "C:/web/deck-agent",
+      "name": "Vite Frontend"
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
   }
 ]

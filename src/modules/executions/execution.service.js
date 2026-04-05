@@ -50,10 +50,11 @@ export const createExecutionRecord = async ({
     actionName,
     deviceId,
     status: "running",
-    output: null,
-    error: null,
     startedAt: new Date().toISOString(),
     endedAt: null,
+    output: null,
+    error: null,
+    meta: null,
   };
 
   executions.unshift(record);
@@ -105,6 +106,7 @@ export const triggerExecution = async ({ actionId, device }) => {
       endedAt: new Date().toISOString(),
       output: result.output || null,
       error: result.error || null,
+      meta: result.meta || null,
     },
   });
 

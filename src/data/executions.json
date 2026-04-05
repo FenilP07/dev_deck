@@ -1,5 +1,93 @@
 [
   {
+    "id": "RDcedloMx6yfalv5gC5Ir",
+    "actionId": "action_open_vscode",
+    "actionName": "Open VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:33:11.176Z",
+    "endedAt": "2026-04-05T05:33:11.183Z",
+    "output": "Opend app: code",
+    "error": null,
+    "meta": null
+  },
+  {
+    "id": "npb5E-r6DpuuoA13EAhVQ",
+    "actionId": "action_start_vite_bg",
+    "actionName": "Start Vite Dev Server",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:32:40.916Z",
+    "endedAt": "2026-04-05T05:32:40.920Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "_BueBTBvAD6TqYVeqjCzI",
+      "pid": 13108,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "S-nOT-ffxVcAdkPCo7Tgr",
+    "actionId": "action_start_vite_bg",
+    "actionName": "Start Vite Dev Server",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:32:38.075Z",
+    "endedAt": "2026-04-05T05:32:38.080Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "-MGIVWvTU7yBW0rmXYeAl",
+      "pid": 17456,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "WyBegn8o2g99ShHUtorOO",
+    "actionId": "action_start_vite_bg",
+    "actionName": "Start Vite Dev Server",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:32:12.515Z",
+    "endedAt": "2026-04-05T05:32:12.524Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "bNmYaIKU1sC9t9aeGWKBU",
+      "pid": 19292,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "a86T3zah4Zc5-Sk1uo3cP",
+    "actionId": "action_start_vite_bg",
+    "actionName": "Start Vite Dev Server",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:20:45.917Z",
+    "endedAt": "2026-04-05T05:20:45.925Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "KVvx4yyWYL5svoXHVWkA9",
+      "pid": 15120,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "rlm-jmvWdCx3NtdOa0MFt",
+    "actionId": "action_open_vscode",
+    "actionName": "Open VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T05:20:17.366Z",
+    "endedAt": "2026-04-05T05:20:17.375Z",
+    "output": "Opend app: code",
+    "error": null,
+    "meta": null
+  },
+  {
     "id": "426h5OhYJuj8FqhAvR9fc",
     "actionId": "action_open_vscode",
     "actionName": "Open VS Code",
