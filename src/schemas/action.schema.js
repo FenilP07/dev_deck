@@ -41,7 +41,8 @@ const delayPayloadSchema = z.object({
 export const actionStepSchema = z.lazy(() =>
   z.object({
     type: actionTypeEnum,
-    payload: z.record(z.any()),
+    label: z.string().optional(),
+    payload: z.any(),
   }),
 );
 
@@ -57,7 +58,7 @@ export const actionSchema = z.object({
   enabled: z.boolean(),
   payload: z.union([
     commandPayloadSchema,
-    commandPayloadSchema,
+    commandBgPayloadSchema,
     openUrlPayloadSchema,
     openAppPayloadSchema,
     delayPayloadSchema,

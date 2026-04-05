@@ -1,5 +1,461 @@
 [
   {
+    "id": "dR4jLFOSLqes_03_bC-_Z",
+    "actionId": "action_start_applydesk_full",
+    "actionName": "Start ApplyDesk Full",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:50:56.691Z",
+    "endedAt": "2026-04-05T16:51:01.767Z",
+    "output": "Opend app: code\nStarted background process: ApplyDesk Backend\nDelayed for 3000 ms\nStarted background process: ApplyDesk Frontend\nDelayed for 2000 ms\nOpened URL: http://localhost:5173",
+    "error": null,
+    "meta": {
+      "steps": [
+        {
+          "index": 0,
+          "type": "open_app",
+          "label": "Open ApplyDesk in VS Code",
+          "success": true,
+          "output": "Opend app: code",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:50:56.692Z",
+          "endedAt": "2026-04-05T16:50:56.695Z"
+        },
+        {
+          "index": 1,
+          "type": "command_bg",
+          "label": "Start backend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Backend",
+          "error": null,
+          "meta": {
+            "processId": "_x1DluenvAYJMlFI1vVaq",
+            "pid": 14040,
+            "name": "ApplyDesk Backend"
+          },
+          "startedAt": "2026-04-05T16:50:56.695Z",
+          "endedAt": "2026-04-05T16:50:56.699Z"
+        },
+        {
+          "index": 2,
+          "type": "delay",
+          "label": "Wait for backend boot",
+          "success": true,
+          "output": "Delayed for 3000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:50:56.699Z",
+          "endedAt": "2026-04-05T16:50:59.709Z"
+        },
+        {
+          "index": 3,
+          "type": "command_bg",
+          "label": "Start frontend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Frontend",
+          "error": null,
+          "meta": {
+            "processId": "YfhtWIZ1RSag-IIeulD4E",
+            "pid": 45232,
+            "name": "ApplyDesk Frontend"
+          },
+          "startedAt": "2026-04-05T16:50:59.709Z",
+          "endedAt": "2026-04-05T16:50:59.713Z"
+        },
+        {
+          "index": 4,
+          "type": "delay",
+          "label": "Wait for frontend boot",
+          "success": true,
+          "output": "Delayed for 2000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:50:59.713Z",
+          "endedAt": "2026-04-05T16:51:01.716Z"
+        },
+        {
+          "index": 5,
+          "type": "open_url",
+          "label": "Open app in browser",
+          "success": true,
+          "output": "Opened URL: http://localhost:5173",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:51:01.716Z",
+          "endedAt": "2026-04-05T16:51:01.767Z"
+        }
+      ],
+      "totalSteps": 6,
+      "completedSteps": 6,
+      "failedStepIndex": null
+    }
+  },
+  {
+    "id": "iThY1ccqI_7rsvKhTyMvb",
+    "actionId": "action_start_applydesk_full",
+    "actionName": "Start ApplyDesk Full",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:49:57.444Z",
+    "endedAt": "2026-04-05T16:50:02.524Z",
+    "output": "Opend app: code\nStarted background process: ApplyDesk Backend\nDelayed for 3000 ms\nStarted background process: ApplyDesk Frontend\nDelayed for 2000 ms\nOpened URL: http://localhost:5173",
+    "error": null,
+    "meta": {
+      "steps": [
+        {
+          "index": 0,
+          "type": "open_app",
+          "label": "Open ApplyDesk in VS Code",
+          "success": true,
+          "output": "Opend app: code",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:49:57.444Z",
+          "endedAt": "2026-04-05T16:49:57.448Z"
+        },
+        {
+          "index": 1,
+          "type": "command_bg",
+          "label": "Start backend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Backend",
+          "error": null,
+          "meta": {
+            "processId": "X7VwIhvz7f1A_mFCiBkCR",
+            "pid": 45360,
+            "name": "ApplyDesk Backend"
+          },
+          "startedAt": "2026-04-05T16:49:57.448Z",
+          "endedAt": "2026-04-05T16:49:57.451Z"
+        },
+        {
+          "index": 2,
+          "type": "delay",
+          "label": "Wait for backend boot",
+          "success": true,
+          "output": "Delayed for 3000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:49:57.451Z",
+          "endedAt": "2026-04-05T16:50:00.453Z"
+        },
+        {
+          "index": 3,
+          "type": "command_bg",
+          "label": "Start frontend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Frontend",
+          "error": null,
+          "meta": {
+            "processId": "2-DHhGK6rc_QutWcwcPjg",
+            "pid": 17188,
+            "name": "ApplyDesk Frontend"
+          },
+          "startedAt": "2026-04-05T16:50:00.453Z",
+          "endedAt": "2026-04-05T16:50:00.457Z"
+        },
+        {
+          "index": 4,
+          "type": "delay",
+          "label": "Wait for frontend boot",
+          "success": true,
+          "output": "Delayed for 2000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:50:00.457Z",
+          "endedAt": "2026-04-05T16:50:02.464Z"
+        },
+        {
+          "index": 5,
+          "type": "open_url",
+          "label": "Open app in browser",
+          "success": true,
+          "output": "Opened URL: http://localhost:5173",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:50:02.464Z",
+          "endedAt": "2026-04-05T16:50:02.524Z"
+        }
+      ],
+      "totalSteps": 6,
+      "completedSteps": 6,
+      "failedStepIndex": null
+    }
+  },
+  {
+    "id": "XWnVWrlL1MTdWzh1z02vl",
+    "actionId": "action_start_applydesk_frontend",
+    "actionName": "Start ApplyDesk Frontend",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:49:32.459Z",
+    "endedAt": "2026-04-05T16:49:32.463Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "5P9u32OBDroxyLnSt7_8l",
+      "pid": 4108,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "QZZaxx2hkSzbGPbT-bINS",
+    "actionId": "action_start_applydesk_frontend",
+    "actionName": "Start ApplyDesk Frontend",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:48:50.521Z",
+    "endedAt": "2026-04-05T16:48:50.522Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "I7zcDTaWGX9GIjLDRy58_",
+      "pid": null,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "PdmMtA6JhsvgBb2v-Q0ph",
+    "actionId": "action_start_applydesk_frontend",
+    "actionName": "Start ApplyDesk Frontend",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:48:35.109Z",
+    "endedAt": "2026-04-05T16:48:35.111Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "MXrzs49llMuBF7Pqv2fsl",
+      "pid": null,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "Yi7NFmZM8TPpQEZ1Bknpn",
+    "actionId": "action_open_applydesk_vscode",
+    "actionName": "Open ApplyDesk in VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:48:14.027Z",
+    "endedAt": "2026-04-05T16:48:14.035Z",
+    "output": "Opend app: code",
+    "error": null,
+    "meta": null
+  },
+  {
+    "id": "_weEclIofckAXiKfuqegP",
+    "actionId": "action_start_applydesk_backend",
+    "actionName": "Start ApplyDesk Backend",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:47:27.629Z",
+    "endedAt": "2026-04-05T16:47:27.638Z",
+    "output": "Started background process: npm run dev",
+    "error": null,
+    "meta": {
+      "processId": "3pFuZW5V5EpQQczMDWaZH",
+      "pid": 25776,
+      "name": "npm run dev"
+    }
+  },
+  {
+    "id": "CJFSWuW2-namvlphBXWaK",
+    "actionId": "action_start_applydesk_full",
+    "actionName": "Start ApplyDesk Full",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:35:21.422Z",
+    "endedAt": "2026-04-05T16:35:26.587Z",
+    "output": "Opend app: code\nStarted background process: ApplyDesk Backend\nDelayed for 3000 ms\nStarted background process: ApplyDesk Frontend\nDelayed for 2000 ms\nOpened URL: http://localhost:5173",
+    "error": null,
+    "meta": {
+      "steps": [
+        {
+          "index": 0,
+          "type": "open_app",
+          "label": "Open ApplyDesk in VS Code",
+          "success": true,
+          "output": "Opend app: code",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:35:21.422Z",
+          "endedAt": "2026-04-05T16:35:21.426Z"
+        },
+        {
+          "index": 1,
+          "type": "command_bg",
+          "label": "Start backend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Backend",
+          "error": null,
+          "meta": {
+            "processId": "A3eeUCcx9OY7wu---PxwX",
+            "pid": 6700,
+            "name": "ApplyDesk Backend"
+          },
+          "startedAt": "2026-04-05T16:35:21.426Z",
+          "endedAt": "2026-04-05T16:35:21.432Z"
+        },
+        {
+          "index": 2,
+          "type": "delay",
+          "label": "Wait for backend boot",
+          "success": true,
+          "output": "Delayed for 3000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:35:21.432Z",
+          "endedAt": "2026-04-05T16:35:24.437Z"
+        },
+        {
+          "index": 3,
+          "type": "command_bg",
+          "label": "Start frontend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Frontend",
+          "error": null,
+          "meta": {
+            "processId": "gwV1XPkOpCZilSwee2p86",
+            "pid": 13568,
+            "name": "ApplyDesk Frontend"
+          },
+          "startedAt": "2026-04-05T16:35:24.437Z",
+          "endedAt": "2026-04-05T16:35:24.442Z"
+        },
+        {
+          "index": 4,
+          "type": "delay",
+          "label": "Wait for frontend boot",
+          "success": true,
+          "output": "Delayed for 2000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:35:24.442Z",
+          "endedAt": "2026-04-05T16:35:26.455Z"
+        },
+        {
+          "index": 5,
+          "type": "open_url",
+          "label": "Open app in browser",
+          "success": true,
+          "output": "Opened URL: http://localhost:5173",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:35:26.455Z",
+          "endedAt": "2026-04-05T16:35:26.587Z"
+        }
+      ],
+      "totalSteps": 6,
+      "completedSteps": 6,
+      "failedStepIndex": null
+    }
+  },
+  {
+    "id": "7oVDS-HtBrkCYSsXX80-M",
+    "actionId": "action_open_applydesk_vscode",
+    "actionName": "Open ApplyDesk in VS Code",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:33:27.134Z",
+    "endedAt": "2026-04-05T16:33:27.141Z",
+    "output": "Opend app: code",
+    "error": null,
+    "meta": null
+  },
+  {
+    "id": "KEqtQue7JOUaqT3ju3oHZ",
+    "actionId": "action_start_applydesk_full",
+    "actionName": "Start ApplyDesk Full",
+    "deviceId": "MB-fl3l_a646ECdkg2POz",
+    "status": "success",
+    "startedAt": "2026-04-05T16:30:46.101Z",
+    "endedAt": "2026-04-05T16:30:51.247Z",
+    "output": "Opend app: code\nStarted background process: ApplyDesk Backend\nDelayed for 3000 ms\nStarted background process: ApplyDesk Frontend\nDelayed for 2000 ms\nOpened URL: http://localhost:5173",
+    "error": null,
+    "meta": {
+      "steps": [
+        {
+          "index": 0,
+          "type": "open_app",
+          "label": "Open ApplyDesk in VS Code",
+          "success": true,
+          "output": "Opend app: code",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:30:46.102Z",
+          "endedAt": "2026-04-05T16:30:46.110Z"
+        },
+        {
+          "index": 1,
+          "type": "command_bg",
+          "label": "Start backend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Backend",
+          "error": null,
+          "meta": {
+            "processId": "1Gc3z42NXpwKeiytyyC9-",
+            "pid": null,
+            "name": "ApplyDesk Backend"
+          },
+          "startedAt": "2026-04-05T16:30:46.110Z",
+          "endedAt": "2026-04-05T16:30:46.111Z"
+        },
+        {
+          "index": 2,
+          "type": "delay",
+          "label": "Wait for backend boot",
+          "success": true,
+          "output": "Delayed for 3000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:30:46.111Z",
+          "endedAt": "2026-04-05T16:30:49.119Z"
+        },
+        {
+          "index": 3,
+          "type": "command_bg",
+          "label": "Start frontend server",
+          "success": true,
+          "output": "Started background process: ApplyDesk Frontend",
+          "error": null,
+          "meta": {
+            "processId": "20u1pXiMVM8TRiwcpWJ6f",
+            "pid": null,
+            "name": "ApplyDesk Frontend"
+          },
+          "startedAt": "2026-04-05T16:30:49.119Z",
+          "endedAt": "2026-04-05T16:30:49.121Z"
+        },
+        {
+          "index": 4,
+          "type": "delay",
+          "label": "Wait for frontend boot",
+          "success": true,
+          "output": "Delayed for 2000 ms",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:30:49.121Z",
+          "endedAt": "2026-04-05T16:30:51.129Z"
+        },
+        {
+          "index": 5,
+          "type": "open_url",
+          "label": "Open app in browser",
+          "success": true,
+          "output": "Opened URL: http://localhost:5173",
+          "error": null,
+          "meta": null,
+          "startedAt": "2026-04-05T16:30:51.129Z",
+          "endedAt": "2026-04-05T16:30:51.247Z"
+        }
+      ],
+      "totalSteps": 6,
+      "completedSteps": 6,
+      "failedStepIndex": null
+    }
+  },
+  {
     "id": "RDcedloMx6yfalv5gC5Ir",
     "actionId": "action_open_vscode",
     "actionName": "Open VS Code",

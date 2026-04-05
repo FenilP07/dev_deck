@@ -1,6 +1,6 @@
 import paths from "../../config/paths.config.js";
-import jsonDb from "../../services/storage/jsonDb.service.js";
-import {actionListSchema} from "../../schemas/action.schema.js";
+import { jsonDb } from "../../services/storage/jsonDb.service.js";
+import { actionListSchema } from "../../schemas/action.schema.js";
 import { ApiError } from "exnexus";
 
 export const getAllActions = async () => {

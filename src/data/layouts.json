@@ -33,6 +33,17 @@
               "row": 0,
               "col": 1
             }
+          },
+          {
+            "id": "btn_applydesk_full",
+            "label": "ApplyDesk",
+            "icon": "rocket",
+            "color": "#2563eb",
+            "actionId": "action_start_applydesk_full",
+            "position": {
+              "row": 1,
+              "col": 0
+            }
           }
         ]
       }

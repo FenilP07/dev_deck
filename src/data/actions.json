@@ -35,5 +35,104 @@
     },
     "createdAt": "2026-03-22T00:00:00.000Z",
     "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+
+  {
+    "id": "action_start_applydesk_frontend",
+    "name": "Start ApplyDesk Frontend",
+    "type": "command_bg",
+    "enabled": true,
+    "payload": {
+      "command": "npm run dev",
+      "cwd": "C:/web/applyDesk/frontend",
+      "name": "ApplyDesk Frontend"
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+  {
+    "id": "action_start_applydesk_backend",
+    "name": "Start ApplyDesk Backend",
+    "type": "command_bg",
+    "enabled": true,
+    "payload": {
+      "command": "npm run dev",
+      "cwd": "C:/web/applyDesk/backend",
+      "name": "ApplyDesk Backend"
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+  {
+    "id": "action_open_applydesk_vscode",
+    "name": "Open ApplyDesk in VS Code",
+    "type": "open_app",
+    "enabled": true,
+    "payload": {
+      "target": "code",
+      "args": ["C:/web/applyDesk"]
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
+  },
+  {
+    "id": "action_start_applydesk_full",
+    "name": "Start ApplyDesk Full",
+    "type": "sequence",
+    "enabled": true,
+    "payload": {
+      "stopOnFailure": true,
+      "steps": [
+        {
+          "type": "open_app",
+          "label": "Open ApplyDesk in VS Code",
+          "payload": {
+            "target": "code",
+            "args": ["C:/web/applyDesk"]
+          }
+        },
+        {
+          "type": "command_bg",
+          "label": "Start backend server",
+          "payload": {
+            "command": "npm run dev",
+            "cwd": "C:/web/applyDesk/backend",
+            "name": "ApplyDesk Backend"
+          }
+        },
+        {
+          "type": "delay",
+          "label": "Wait for backend boot",
+          "payload": {
+            "ms": 3000
+          }
+        },
+        {
+          "type": "command_bg",
+          "label": "Start frontend server",
+          "payload": {
+            "command": "npm run dev",
+            "cwd": "C:/web/applyDesk/frontend",
+            "name": "ApplyDesk Frontend"
+          }
+        },
+        {
+          "type": "delay",
+          "label": "Wait for frontend boot",
+          "payload": {
+            "ms": 2000
+          }
+        },
+        {
+          "type": "open_url",
+          "label": "Open app in browser",
+          "payload": {
+            "url": "http://localhost:5173"
+          }
+        }
+      ] 
+    },
+    "createdAt": "2026-03-22T00:00:00.000Z",
+    "updatedAt": "2026-03-22T00:00:00.000Z"
   }
 ]
