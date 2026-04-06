@@ -1,8 +1,12 @@
 const runningProcesses = new Map();
 
 export const registerProcess = (processInfo) => {
-  runningProcesses.set(processInfo.id, processInfo);
-  return processInfo;
+  const enriched = {
+    ...processInfo,
+    deviceId: processInfo.deviceId || null,
+  };
+  runningProcesses.set(enriched.id, enriched);
+  return enriched;
 };
 
 export const getAllProcesses = () => {

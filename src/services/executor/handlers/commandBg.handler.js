@@ -4,13 +4,20 @@ import {
   registerProcess,
   updateProcess,
 } from "../../process/process.manager.js";
+import {
+  emitProcessStarted,
+  emitProcessLog,
+  emitProcessUpdated,
+  emitProcessStopped,
+} from "../../socket/socket.events.js";
 
-export const runBackgroundCommand = async (payload = {}) => {
+export const runBackgroundCommand = async (payload = {}, context = {}) => {
   const command = payload.command;
   const cwd = payload.cwd || process.cwd();
   const shell = typeof payload.shell === "boolean" ? payload.shell : true;
   const env = payload.env || {};
   const name = payload.name || command;
+  const deviceId = context.deviceId || null;
 
   return new Promise((resolve) => {
     try {
@@ -23,13 +30,14 @@ export const runBackgroundCommand = async (payload = {}) => {
         },
         detached: false,
       });
-      const processId = nanoid();
 
+      const processId = nanoid();
       let stdoutBuffer = "";
       let stderrBuffer = "";
 
       const processInfo = registerProcess({
         id: processId,
+        deviceId,
         name,
         command,
         cwd,
@@ -43,18 +51,47 @@ export const runBackgroundCommand = async (payload = {}) => {
         stderr: "",
       });
 
+      // 🔥 emit started
+      if (deviceId) {
+        emitProcessStarted(deviceId, processInfo);
+      }
+
       child.stdout?.on("data", (chunk) => {
-        stdoutBuffer += chunk.toString();
-        updateProcess(processId, { stdout: stdoutBuffer });
+        const text = chunk.toString();
+        stdoutBuffer += text;
+
+        const updated = updateProcess(processId, { stdout: stdoutBuffer });
+
+        if (deviceId) {
+          emitProcessLog(deviceId, {
+            processId,
+            type: "stdout",
+            chunk: text,
+          });
+
+          emitProcessUpdated(deviceId, updated);
+        }
       });
 
       child.stderr?.on("data", (chunk) => {
-        stderrBuffer += chunk.toString();
-        updateProcess(processId, { stderr: stderrBuffer });
+        const text = chunk.toString();
+        stderrBuffer += text;
+
+        const updated = updateProcess(processId, { stderr: stderrBuffer });
+
+        if (deviceId) {
+          emitProcessLog(deviceId, {
+            processId,
+            type: "stderr",
+            chunk: text,
+          });
+
+          emitProcessUpdated(deviceId, updated);
+        }
       });
 
       child.on("close", (code, signal) => {
-        updateProcess(processId, {
+        const updated = updateProcess(processId, {
           status: code === 0 ? "exited" : "failed",
           endedAt: new Date().toISOString(),
           exitCode: code,
@@ -62,15 +99,22 @@ export const runBackgroundCommand = async (payload = {}) => {
           stdout: stdoutBuffer,
           stderr: stderrBuffer,
         });
+
+        if (deviceId) {
+          emitProcessStopped(deviceId, updated);
+        }
       });
+
       child.on("error", (error) => {
-        updateProcess(processId, {
+        const updated = updateProcess(processId, {
           status: "failed",
           endedAt: new Date().toISOString(),
-          exitCode: null,
-          signal: null,
           stderr: error.message,
         });
+
+        if (deviceId) {
+          emitProcessStopped(deviceId, updated);
+        }
       });
 
       resolve({

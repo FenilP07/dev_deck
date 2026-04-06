@@ -5,6 +5,8 @@ import {
   updateProcess,
 } from "../../services/process/process.manager.js";
 
+import { emitProcessStopped } from "../../services/socket/socket.events.js";
+
 export const listProcesses = async () => {
   return getAllProcesses();
 };
@@ -36,6 +38,9 @@ export const stopProcess = async (processId) => {
       endedAt: new Date().toISOString(),
       signal: "SIGTERM",
     });
+    if (processInfo.deviceId) {
+      emitProcessStopped(processInfo.deviceId, updated);
+    }
     return updated;
   } catch (error) {
     throw errors.internalServerError(

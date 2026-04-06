@@ -12,6 +12,7 @@ import { nanoid } from "nanoid";
 import {
   emitExecutionFinished,
   emitExecutionStarted,
+  emitProcessStopped
 } from "../../services/socket/socket.events.js";
 
 export const getAllExecutions = async () => {
@@ -97,7 +98,9 @@ export const triggerExecution = async ({ actionId, device }) => {
   });
   emitExecutionStarted(device.id, execution);
 
-  const result = await executeActionDefinition(action);
+  const result = await executeActionDefinition(action, {
+    deviceId: device.id,
+  });
 
   const finalized = await finalizeExecutionRecord({
     executionId: execution.id,

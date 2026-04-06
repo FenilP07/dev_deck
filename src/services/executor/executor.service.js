@@ -6,24 +6,27 @@ import { runDelay } from "./handlers/delay.handler.js";
 import { runSequence } from "./handlers/sequence.handler.js";
 import { runBackgroundCommand } from "./handlers/commandBg.handler.js";
 
-export const executeActionDefinition = async (action) => {
+export const executeActionDefinition = async (action, context = {}) => {
   if (!action?.enabled) {
     throw new ApiError(400, `Action is disabled: ${action?.id || "unknown"}`);
   }
 
-  return executeStep({
-    type: action.type,
-    payload: action.payload,
-  });
+  return executeStep(
+    {
+      type: action.type,
+      payload: action.payload,
+    },
+    context,
+  );
 };
 
-export const executeStep = async (step) => {
+export const executeStep = async (step, context = {}) => {
   switch (step.type) {
     case "command":
       return runCommand(step.payload);
 
     case "command_bg":
-      return runBackgroundCommand(step.payload);
+      return runBackgroundCommand(step.payload, context);
 
     case "open_url":
       return runOpenUrl(step.payload);
@@ -35,7 +38,7 @@ export const executeStep = async (step) => {
       return runDelay(step.payload);
 
     case "sequence":
-      return runSequence(step.payload, executeStep);
+      return runSequence(step.payload, (step) => executeStep(step, context));
 
     default:
       return {
